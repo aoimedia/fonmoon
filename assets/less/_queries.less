@@ -1,0 +1,114 @@
+// Colors ...................................................................
+
+@black-100: #1B1B1B;
+@black-50:  #393939;
+@black-25:  #575757;
+@gray:      #D4D4D4;
+@white:        #fff;
+
+
+
+
+// Typography ...............................................................
+
+@sans: "Helvetica Neue", Helvetica, sans-serif;
+@serif: "Palatino", Georgia, serif;
+
+
+
+
+// Opacity ..................................................................
+
+// USAGE: .opacity(8);
+.opacity(@opacity) {
+  @opacityPercentage: @opacity * 100;
+  -ms-filter: ~"progid:DXImageTransform.Microsoft.Alpha(Opacity=(@{opacityPercentage}))";
+  filter: ~"alpha(opacity = (@{opacityPercentage}))";
+  -khtml-opacity: @opacity;
+    -moz-opacity: @opacity;
+         opacity: @opacity;
+}
+
+
+
+
+// Border Radius ............................................................
+
+// USAGE: .border-radius(3px);
+.border-radius(@radius: 3px) {
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+          border-radius: @radius;
+  -webkit-background-clip: padding-box;
+     -moz-background-clip: padding-box;
+          background-clip: padding-box;
+}
+
+
+
+
+// Transition ...............................................................
+
+// USAGE: .transition(all,0.2s);
+.transition(@what: all, @time: 0.2s, @transition: ease-in-out) {
+	-webkit-transition: @what @time @transition;
+	-moz-transition:    @what @time @transition;
+	-ms-transition:     @what @time @transition;
+	-o-transition:      @what @time @transition;
+	transition:         @what @time @transition;
+}
+
+
+
+
+// Gradients ................................................................
+
+// USAGE: .gradient(#dfdfdf,#f8f8f8);
+.gradient(@from: #fff, @to: #000) {
+  background-color: @to;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(@from), to(@to));
+  background-image: -webkit-linear-gradient(top, @from, @to);
+  background-image: -moz-linear-gradient(top, @from, @to);
+  background-image: -o-linear-gradient(top, @from, @to);
+  background-image: linear-gradient(to bottom, @from, @to);
+}
+
+
+
+
+// Box Shadow ...............................................................
+
+// USAGE: .boxShadow(0,0,4px,#444);
+.boxShadow(@x: 0, @y: 0, @radius: 4px, @spread: 0, @color: rgba(0,0,0,0.5)) {
+	-webkit-box-shadow: @x @y @radius @spread @color;
+	   -moz-box-shadow: @x @y @radius @spread @color;
+					box-shadow: @x @y @radius @spread @color;
+}
+
+
+
+
+// Background Size ..........................................................
+
+// USAGE: .background-size(100%);
+.background-size (@bgs: 100%) {
+	-webkit-background-size: @bgs;
+	   -moz-background-size: @bgs;
+    	-ms-background-size: @bgs;
+        	background-size: @bgs;
+}
+
+
+
+
+// Retina ...................................................................
+
+.at2x(@path, @w: auto, @h: auto) {
+	background-image: url(@path);
+	@at2x_path: ~`"@{path}".split('.').slice(0, "@{path}".split('.').length - 1).join(".") + "@2x" + "." + "@{path}".split('.')["@{path}".split('.').length - 1]`;
+
+	@media all and (-webkit-min-device-pixel-ratio : 1.5) {
+		background-image: url(@at2x_path);
+		.background-size(100%);
+	}
+}

@@ -1,0 +1,595 @@
+// SUMMARY ..................................................................
+
+// 1.0 - Vendor
+// 1.1 - Base
+// 1.2 - Links
+// 1.3 - Typography
+// 1.4 - Embedded content
+// 1.5 - Forms
+// 1.6 - Tables
+// 1.7 - Clearfix
+
+
+
+
+// 1.0 — Vendor .............................................................
+
+// The box-sizing property allows to define certain elements to fit an area in a certain way
+
+*,
+::after,
+::before {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* { outline: none; }
+
+
+
+
+// Corrects `block` display not defined in IE 8/9.
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary { display: block; }
+
+
+
+
+// For absolutely positioning elements within containers
+
+div,
+article,
+section,
+header,
+footer,
+nav,
+figure,
+li { position: relative; }
+
+
+
+
+// Corrects `inline-block` display not defined in IE 8/9.
+
+audio,
+canvas,
+video { display: inline-block; }
+
+
+
+
+// Prevents modern browsers from displaying `audio` without controls.
+// Remove excess height in iOS 5 devices.
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+
+
+
+// Addresses styling for `hidden` attribute not present in IE 8/9.
+
+[hidden] { display: none; }
+
+
+
+
+// 1.1 - Base ...............................................................
+
+// 1. Sets default font family
+// 2. Prevents iOS text size adjust after orientation change, without disabling user zoom.
+
+html {
+  overflow-y: scroll;
+  font-size: 100%;
+  font-family: @serif;                // 1.
+  -webkit-text-size-adjust: 100%;     // 2.
+  -ms-text-size-adjust: 100%;         // 2.
+  text-size-adjust: 100%;             // 2.
+  text-rendering: optimizeLegibility;
+}
+
+
+
+
+// 1. Removes default margin.
+
+body {
+  margin: 0;
+  background: @white; // 1.
+  color: @black-50;
+}
+
+// 1.2 - Links ..............................................................
+
+// Addresses `outline` inconsistency between Chrome and other browsers.
+
+a:focus { outline: thin dotted; }
+
+a {
+  color: @black-50;
+  text-decoration: none;
+  .transition(all,0.2s);
+}
+
+
+
+
+// Outline the tap color on iOS Devices
+a:link { -webkit-tap-highlight-color : @black-50; }
+
+
+
+
+// Improves readability when focused and also mouse hovered in all browsers.
+
+a:active,
+a:hover { outline: 0; }
+
+a:hover { color: @black-100; }
+
+
+
+
+// 1.3 - Typography .........................................................
+
+body {
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font: 700 100%/1.5 @sans;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  clear: both;
+  padding: 0;
+  margin: 0;
+}
+
+h2,
+h3,
+h4,
+h5 { margin-bottom: 0.5em; }
+
+
+
+
+// Addresses `h1` font sizes within `section` and `article` in Firefox 4+, Safari 5, and Chrome.
+
+h1 { font-size: 5.0625em; }
+
+h2 { font-size: 1.625em; }
+
+h3 { font-size: 1.25em; }
+
+h4,
+h5 { margin-bottom: 0.5em; }
+
+
+
+
+// Kirby Markdown limitation
+
+h1 > p,
+h2 > p,
+h3 > p,
+h4 > p,
+h5 > p { margin: 0; }
+
+p {
+  margin: 0 0 1.5em 0;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+  font-weight: 300;
+  font-size: 1.125em;
+}
+
+p + p { text-indent: 2em; }
+
+
+
+
+// Addresses styling not present in IE 8/9, Safari 5, and Chrome.
+
+abbr[title] { border-bottom: 1px dotted; }
+
+
+
+em,
+i {
+  font-weight: normal;
+  font-style: italic;
+}
+
+
+
+
+// Addresses style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+
+b,
+strong { font-weight: 600; }
+
+
+
+
+// Addresses styling not present in Safari 5 and Chrome.
+
+dfn { font-style: italic; }
+
+
+
+
+ul, ol {
+  margin: 0 0 1.5em;
+  padding: 0 0 0 1.25em;
+  font-size: 1.125em;
+  line-height: 1.5;
+}
+
+ul li,
+ol li { list-style: disc; }
+
+
+
+
+// Addresses styling not present in IE 8/9.
+
+mark {
+  background: @black-50;
+  color: @white;
+}
+
+// Match any user-selected text within a textarea element.
+
+::-webkit-selection {
+  background-color: @black-50;
+  color: @white;
+}
+
+::-moz-selection {
+  background-color: @black-50;
+  color: @white;
+}
+
+::selection {
+  background-color: @black-50;
+  color: @white;
+}
+
+
+
+
+// Placeholder text in inputs has (in the browsers implementing it so far) a light gray color. To style it, you'll need vendor prefix CSS properties.
+
+::-webkit-input-placeholder {
+  font-size: .875em;
+  line-height: 1.4;
+}
+
+input:-moz-placeholder {
+  font-size: .875em;
+  line-height: 1.4;
+}
+
+
+
+
+// Match any user-selected text within a textarea element.
+
+img::selection { background: transparent; }
+img::-moz-selection { background: transparent; }
+
+
+
+
+// Corrects font family set oddly in Safari 5 and Chrome.
+
+code,
+kbd,
+pre,
+samp {
+    font-size: 0.75em;
+}
+
+
+
+
+// Improves readability of pre-formatted text in all browsers.
+
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+
+
+
+// Sets consistent quote types.
+
+q { quotes: "\201C" "\201D" "\2018" "\2019"; }
+
+blockquote {
+  padding-left: 1em;
+  border-left: 0.1255em solid @gray;
+}
+
+blockquote p { font-style: italic !important; }
+
+
+
+
+// Addresses inconsistent and variable font size in all browsers.
+
+small { font-size: 80%; }
+
+
+
+
+// Prevents `sub` and `sup` affecting `line-height` in all browsers.
+
+sub,
+sup {
+  position: relative;
+  vertical-align: baseline;
+  font-size: 75%;
+  line-height: 0;
+  padding-left: 0.1875em;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+
+
+
+// 1.4 - Embedded content ...................................................
+
+// 1. Removes border when inside `a` element in IE 8/9.
+// 2. IE < 8 does not scale images well
+// 3. To make all images fluid
+// 4. User-select is disabled so images dont get selected during drag.
+
+img {
+  width: 100%;                     // 3.
+  height: auto;
+  border: 0;                       // 1.
+  vertical-align: middle;
+  -ms-interpolation-mode: bicubic; // 2.
+  image-rendering: optimizeQuality;
+  -moz-user-select: none;          // 4.
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  image-rendering: optimizeQuality;
+}
+
+a > img {
+  display: block;
+  border: 0;
+}
+
+
+
+
+// New impage replacement
+.image-replacement {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+
+
+
+// Addresses margin not present in IE 8/9 and Safari 5.
+
+figure { margin: 0; }
+
+
+
+
+// Corrects overflow displayed oddly in IE 9.
+
+svg:not(:root) { overflow: hidden; }
+
+
+
+
+// Other media-ready elements
+
+iframe, embed, object, video {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+
+
+
+
+// 1.5 - Forms ..............................................................
+
+// Define consistent border, margin, and padding.
+
+fieldset {
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+  border: 1px solid #c0c0c0;
+}
+
+
+
+
+// 1. Corrects color not being inherited in IE 8/9.
+// 2. Remove padding so people aren't caught out if they zero out fieldsets.
+
+legend { // 1.
+  padding: 0;
+  border: 0; // 2.
+}
+
+
+
+
+// 1. Corrects font family not being inherited in all browsers.
+// 2. Corrects font size not being inherited in all browsers.
+// 3. Addresses margins set differently in Firefox 4+, Safari 5, and Chrome
+
+button,
+input,
+select,
+textarea {      // 2.
+  margin: 0; // 1.
+  font-size: 100%;
+  font-family: inherit;            // 3.
+}
+
+
+
+
+// Addresses Firefox 4+ setting `line-height` on `input` using `!important` in the UA stylesheet.
+
+button,
+input {
+  line-height: normal;
+}
+
+
+
+
+// 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio` and `video` controls.
+// 2. Corrects inability to style clickable `input` types in iOS.
+// 3. Improves usability and consistency of cursor style between image-type `input` and others.
+
+button,
+html input[type="button"],    // 1.
+input[type="reset"],
+input[type="submit"] { // 2.
+  cursor: pointer;
+  -webkit-appearance: button;            // 3.
+}
+
+
+
+
+// Re-set default cursor for disabled elements.
+
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+
+
+
+
+// 1. Removes excess padding in IE 8/9.
+
+input[type="checkbox"],
+input[type="radio"] {
+  padding: 0; // 2.
+}
+
+
+
+
+// 1. Addresses `appearance` set to `searchfield` in Safari 5 and Chrome.
+// 2. Addresses `box-sizing` set to `border-box` in Safari 5 and Chrome (include `-moz` to future-proof).
+
+input[type="search"] {
+  -webkit-box-sizing: content-box;   // 1.
+  -moz-box-sizing: content-box; // 2.
+  box-sizing: content-box;
+  -webkit-appearance: textfield;
+}
+
+
+
+
+// Removes inner padding and search cancel button in Safari 5 and Chrome on OS X.
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+
+
+
+// Removes inner padding and border in Firefox 4+.
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+
+
+
+// 1. Removes default vertical scrollbar in IE 8/9.
+// 2. Improves readability and alignment in all browsers.
+
+textarea {
+  overflow: auto;      // 1.
+  vertical-align: top; // 2.
+}
+
+
+
+
+// 1.6 - Tables .............................................................
+
+// Remove most spacing between table cells.
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+
+
+
+// 1.7 - Clearfix ...........................................................
+
+.clearfix:after {
+  display: block;
+  visibility: hidden;
+  clear: both;
+  height: 0;
+  content: " ";
+  font-size: 0;
+  line-height: 0;
+}
+
+html[xmlns] .clearfix { display: block; }
+
+* html .clearfix { height: 1%; }

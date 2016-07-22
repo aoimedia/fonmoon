@@ -1,0 +1,227 @@
+// Base .....................................................................
+
+
+
+
+// Design ...................................................................
+
+
+
+
+// Header ...................................................................
+
+#header {
+  text-align: left;
+  padding: 3em 0;
+}
+
+
+// Logo
+
+#logo {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 0;
+}
+
+#primary {
+  height: 100%;
+  position: absolute;
+  right: 0; // Firefox
+}
+
+#secondary {
+  padding-bottom: 15%;
+}
+
+
+// Navigation ...............................................................
+
+.nav {
+  top: 0;
+  margin-bottom: 0;
+}
+
+.nav ul,
+.nav li { margin: 0 0 0.75em; }
+
+.nav li:last-child { border: 0; }
+
+.nav a {
+  width: 55%;
+  border: 0;
+  padding: 0;
+}
+
+.nav .info { display: inline-block; }
+
+
+
+
+// Container ................................................................
+
+#container { padding: 0 0 6em; }
+
+
+
+
+// Article ..................................................................
+
+
+// .ext fo Homepage
+
+.article.ext {
+  background: @white url('../images/loader.gif') no-repeat center center;
+  padding-bottom: 1.5em;
+}
+
+.article.ext:nth-child(2n+1) {
+  margin: 0 5% 0 0;
+	width: 47.5%;
+}
+
+.article.ext:nth-child(2n+2) {
+	margin: 0 0 0;
+  width: 47.5%;
+}
+
+.media { margin-bottom: 1.5em; }
+
+.title { margin-bottom: 1em !important; }
+
+.excerpt { padding: 0 10%; }
+
+
+// CSS3 Solution for fade loading animation
+
+@-webkit-keyframes fadeIn {
+  from { opacity:0; }
+  to { opacity:1; }
+}
+
+@-moz-keyframes fadeIn {
+  from { opacity:0; }
+  to { opacity:1; }
+}
+
+@-o-keyframes fadeIn {
+  from { opacity:0; }
+  to { opacity:1; }
+}
+
+@keyframes fadeIn {
+  from { opacity:0; }
+  to { opacity:1; }
+}
+
+.animate {
+  opacity: 0;
+  opacity: 1 \9; // IF IE
+
+  -webkit-animation: fadeIn ease-in 1;
+  -moz-animation: fadeIn ease-in 1;
+  -ms-animation: fadeIn ease-in 1;
+  -o-animation: fadeIn ease-in 1;
+  animation: fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+
+  -webkit-animation-duration: 0.5s;
+  -moz-animation-duration: 0.5s;
+  -o-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+}
+
+.article.ext:first-child {
+  -webkit-animation-delay: 0.8s;
+  -moz-animation-delay: 0.8s;
+  -ms-animation-delay: 0.8s;
+  -o-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+}
+
+.article.ext:nth-child(2n) {
+  -webkit-animation-delay: 1.2s;
+  -moz-animation-delay: 1.2s;
+  -ms-animation-delay: 1.2s;
+  -o-animation-delay: 1.2s;
+  animation-delay: 1.2s;
+}
+
+.article.ext:nth-child(3n) {
+  -webkit-animation-delay: 1.6s;
+  -moz-animation-delay: 1.6s;
+  -ms-animation-delay: 1.6s;
+  -o-animation-delay: 1.6s;
+  animation-delay: 1.6s;
+}
+
+.article.ext:nth-child(4n) {
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  -ms-animation-delay: 2s;
+  -o-animation-delay: 2s;
+  animation-delay: 2s;
+}
+
+
+// Content
+
+.content { padding: 0 0 2.25em; }
+
+
+// Sidebar
+
+#sidebar {
+  text-align: left;
+  position: absolute;
+  left: 0;
+  margin-top: 0.4em;
+}
+
+#sidebar .content { padding: 1.5em 0 1.25em; }
+
+
+// Meta
+
+#meta .info { margin: 2.5em 0 0; }
+
+
+
+
+// Video ....................................................................
+
+// .vendor iframe { .opacity(0); }
+
+
+
+
+// Pagination ...............................................................
+
+#pagination {
+  position: absolute;
+  top: 1em;
+  right: 0;
+}
+
+
+
+
+// Footer ...................................................................
+
+#footer .row { padding: .75em 0 1.5em; }
+
+#footer p { margin-bottom: inherit; }
+
+#footer .col2-b { text-align: right; }
+
+
+
+
+// Slider ...................................................................
+
+.flexslider { margin: 0 0 2.5em; }

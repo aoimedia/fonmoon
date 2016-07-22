@@ -1,0 +1,267 @@
+// Design ...................................................................
+
+#design { overflow: hidden; }
+
+
+
+
+// Grid .....................................................................
+
+.row {
+  clear: both;
+  margin: 0 auto;
+  max-width: 1000px;
+  width: 90%;
+  zoom: 1;
+}
+
+.row:after {
+  display: block;
+  visibility: hidden;
+  clear: both;
+  height: 0;
+  content: " ";
+  font-size: 0;
+}
+
+
+
+
+// Header ...................................................................
+
+#header {
+  text-align: center;
+  padding: 0 0 0.75em;
+}
+
+
+// Logo
+
+#logo {
+  width: 100%;
+  font-weight: 700;
+  border-bottom: 0.15em solid @black-50;
+  display: inline-block;
+  margin-bottom: 0.5em;
+}
+
+
+
+
+// Navigation ...............................................................
+
+.nav {
+  font: 500 0.7em/1 @sans;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  position: relative;
+  margin-bottom: 1.5em;
+}
+
+.nav ul, .nav li {
+  padding: 0;
+  margin: 0;
+}
+
+.nav li { display: block; }
+
+.nav li:last-child { border-bottom: 0.1rem solid @gray; }
+
+.nav a {
+  display: block;
+  width: 100%;
+  color: @black-25;
+  padding: 1em 0;
+  border-top: 0.1rem solid @gray;
+}
+.nav a:hover { background: #eee; }
+
+.nav .active {
+  font-weight: 700;
+  color: @black-100;
+}
+
+.nav.subpages {
+  padding: 2.75em 0;
+  border-top: 1px solid @gray;
+}
+
+
+// Info's
+
+.info > h1,
+.info > h2,
+.info > h3,
+.info > h4,
+.info > h5,
+.info > p,
+.info {
+  display: block;
+  margin-bottom: 1em;
+  text-transform: lowercase;
+  font: italic 15px/1.5 @serif;
+}
+
+.info i { color: @gray; }
+
+.info-1 span {
+  font-weight: 700;
+  font-style: normal;
+  text-transform: capitalize; // Kirby limitation fix
+}
+
+
+// Tags
+
+.nav.tags { position: relative; }
+
+
+
+
+// Container ................................................................
+
+#container {
+  overflow: hidden;
+  padding: 0 0 3em;
+}
+
+
+
+
+// Article ..................................................................
+
+
+// .ext fo Homepage
+
+.article.ext {
+  text-align: center;
+  padding-bottom: .75em;
+}
+
+.article.ext .title {
+  text-align: center;
+  font-size: 1.125em;
+}
+
+.media { margin-bottom: 1em; }
+
+.media a { display: block; }
+
+.title { margin-bottom: 0.5em !important; }
+
+.excerpt {
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-style: italic;
+  font-size: 1.125em;
+  padding: 0 7.5%;
+  color: @black-25;
+}
+
+
+
+// Content
+
+.content p + p { text-indent: 25px; }
+
+.content p + p img {
+  text-indent: 0;
+  margin-left: -25px;
+}
+
+.content li { margin-bottom: 1.125em; }
+
+.content a { border-bottom: 1px solid @gray; }
+
+.content a:hover { border-color: @black-50; }
+
+
+// Sidebar
+
+#sidebar {
+  text-align: center;
+}
+
+#sidebar .content {
+  border-top: 1px solid @gray;
+  padding: 1em 0 0;
+}
+
+
+// Meta
+
+#meta {
+  border-top: 1px solid @gray;
+  padding: 0 0 1.25em;
+}
+
+#meta .info { margin: 1.5em 0 0; }
+
+
+
+
+// Video ....................................................................
+
+.vendor { margin: 0 0 2em; }
+
+
+
+
+// Pagination ...............................................................
+
+#pagination.index {
+  text-align: center;
+  position: relative;
+  top: inherit;
+  right: inherit;
+}
+
+#pagination a,
+#pagination span {
+  background: url('../images/pagination.png') no-repeat 0 0;
+  text-indent: -999em;
+  display: inline-block;
+  height: 36px;
+  width: 36px;
+  .opacity(0.5);
+}
+
+#pagination a:hover { .opacity(1); }
+
+#pagination .prev { }
+#pagination .next { background-position: -36px 0; }
+
+#pagination span.prev,
+#pagination span.next { .opacity(0.1); }
+
+
+
+
+// Footer ...................................................................
+
+#footer .row {
+  padding: 1em 0;
+  border-top: 3px solid @black-50;
+  font-family: @sans;
+}
+
+#footer p {
+  text-transform: uppercase;
+  font-size: 0.75em;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.75em;
+}
+
+#footer br { line-height: 1.75; }
+
+#footer .col2-b { text-align: left; }
+
+#footer .kirby {
+  background: url('../images/kirbyicon.png') no-repeat 0 0;
+  height: 16px;
+  width: 16px;
+  display: inline-block;
+ .opacity(0.9);
+}
+
+#footer .kirby:hover { .opacity(1); }

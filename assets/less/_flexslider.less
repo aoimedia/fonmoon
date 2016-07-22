@@ -1,0 +1,91 @@
+.flexslider {
+  min-height: 190px;
+  background: @white url('../images/loader.gif') no-repeat center center;
+  position: relative;
+  zoom: 1;
+  margin: 0 0 0.75em;
+  text-align: center;
+}
+
+.flexslider img {
+  max-width: 100%;
+  vertical-align: middle;
+  max-height: 667px;
+  height: auto;
+  width: auto;
+  margin: 0 auto;
+  .border-radius(6px);
+}
+
+.flexslider .slides {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+// Hide the slides before the JS is loaded. Avoids image jumping
+.flexslider .slides > li {
+  display: none;
+  -webkit-backface-visibility: hidden;
+  white-space: nowrap;
+  list-style: none;
+}
+
+// Clearfix for the .slides element
+.slides:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+html[xmlns] .slides { display: block; }
+* html .slides { height: 1%; }
+
+// No JavaScript Fallback
+// If you are not using another script, such as Modernizr,
+// make sure you include js that eliminates this class on page load
+.no-js .slides > li:first-child { display: block; }
+
+// Slide Navigation
+/* Direction Nav */
+
+.flex-direction-nav {
+  *height: 0;
+  margin: 0;
+  padding: 0;
+  height: 0; /* Fix */
+}
+
+.flex-direction-nav li {
+  position: static;
+  list-style-type: none;
+  font-size: inherit;
+}
+
+.flex-direction-nav a {
+  width: 50%;
+  height: 100%;
+  margin: 0;
+  display: block;
+  background: @white;
+  position: absolute;
+  top: 0;
+  outline: 0;
+  cursor: pointer;
+  text-indent: -9999px;
+  .opacity(0);
+  -webkit-transition: all .3s ease;
+}
+
+.flex-direction-nav .flex-next { right: 0; }
+
+.flex-direction-nav .flex-prev { left: 0; }
+
+.flexslider:hover .flex-next:hover,
+.flexslider:hover .flex-prev:hover { .opacity(0.1); }
+
+.flexslider:hover .flex-next:hover { cursor: e-resize; }
+.flexslider:hover .flex-prev:hover { cursor: w-resize; }

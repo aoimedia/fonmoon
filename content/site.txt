@@ -1,0 +1,17 @@
+﻿Title: Fonmoon
+
+----
+
+Description: Free-based theme for digital fashion publishing in the hybrid form of a digital platform
+
+----
+
+Twitter: @roman_oroco
+
+----
+
+Copyright: Theme licensed (link: http://creativecommons.org/licenses/by-nc-sa/3.0/ text:BY-NC-SA Creative Commons).<br>Photographs © (link: http://christinaabdeeva.com text: Christina Abdeeva)
+
+----
+
+Footer: Theme By (link: http://oroco.me/ text: Roman Horokhovatskyy)<br>Powered by (link: http://getkirby.com/ text: Kirby CMS class: kirby image-replacement)

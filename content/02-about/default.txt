@@ -1,0 +1,13 @@
+﻿Title: About
+
+----
+
+Text: This is demonstrative site of Fonmoon Theme for Kirby CMS. If you don't know  (link: http://getkirby.com/ text: Kirby) I really recommend to visit *Kirby* site.
+
+I'm working on final release of this theme and will be released soon.
+
+Theme license will be Open Source except the Kirby CMS.
+
+----
+
+Aside: Stay tuned and follow me on twitter (link: http://twitter.com/roman_oroco text: @roman_roman)
