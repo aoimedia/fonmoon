@@ -1,6 +1,6 @@
 # Fonmoon
 
-A minimal Kirby theme by Roman Horokhovatskyy
+A minimal Kirby theme by Roman Horokhovatskyy, 2012
 
 ![screen](screen.png)
 
@@ -8,5 +8,7 @@ A minimal Kirby theme by Roman Horokhovatskyy
 
 - Kirby v1.1.1
 - Kirby Panel v0.9
+
+## Kirby CMS
 
 More about [Kirby CMS](https://getkirby.com/).
