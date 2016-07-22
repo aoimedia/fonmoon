@@ -4,6 +4,8 @@ A minimal Kirby theme by Roman Horokhovatskyy, 2012
 
 ![screen](screen.png)
 
+*Theme is under [GNU GPLv3](license) license.*
+
 ## Requirements
 
 - Kirby v1.1.1
