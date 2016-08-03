@@ -13,6 +13,10 @@ A minimal Kirby theme by Roman Horokhovatskyy, 2012
 
 More about [Kirby CMS](https://getkirby.com/).
 
+## Images
+
+*Photographs are provided and copyrighted by Christina Abdeeva*
+
 ## License
 
 *Theme is under [GNU GPLv3](license) license.*
