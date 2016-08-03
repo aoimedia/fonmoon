@@ -2,7 +2,7 @@
 
 A minimal Kirby theme by Roman Horokhovatskyy, 2012
 
-![screen](screen.png)
+![screen](screenshot.png)
 
 ## Requirements
 
